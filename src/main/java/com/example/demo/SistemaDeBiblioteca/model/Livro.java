@@ -29,7 +29,7 @@ public class Livro extends EntidadeBase implements Emprestavel, Reservavel{
 
 
     @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @JoinColumn(name = "autor_id")
+    @JoinColumn(name = "autor_id", nullable = false)
     private Autor autor;
     
     public Livro(String titulo, Autor autor, String editora) {
